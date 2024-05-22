@@ -26,7 +26,7 @@ Node *inserir(Node *node, char *palavra)
 
     int comp = strcmp(palavra, node->palavra);
     if (comp < 0)
-        node->direita = inserir(node->direita, palavra);
+        node->esquerda = inserir(node->esquerda, palavra);
     else if (comp > 0)
         node->direita = inserir(node->direita, palavra);
     else
@@ -61,5 +61,7 @@ int main()
 {
     char *palavras[] = {"carro", "navio", "carro", "aviao", "carro", "camelo", "carro", "motocicleta", "carro", "navio", "aviao", "carro", "navio", NULL};
     processaPalavras(palavras);
+
+    getchar();
     return 0;
 }
