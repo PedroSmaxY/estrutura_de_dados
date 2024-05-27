@@ -12,23 +12,17 @@ Fila *enfileira(Fila *fila, int valor)
 {
     Fila *novo = malloc(sizeof(Fila));
     if (novo == NULL)
-    {
         return NULL;
-    }
 
     novo->valor = valor;
     novo->prox = NULL;
 
     if (fila == NULL)
-    {
         return novo;
-    }
 
     Fila *aux = fila;
     while (aux->prox != NULL)
-    {
         aux = aux->prox;
-    }
 
     aux->prox = novo;
     return fila;
@@ -120,13 +114,9 @@ int main()
     mostraInverso(fila);
 
     if (vazia(fila) == 1)
-    {
         printf("\nA fila está vazia!\n");
-    }
     else
-    {
         printf("\nA fila não está vazia!\n");
-    }
 
     while (fila != NULL)
     {
